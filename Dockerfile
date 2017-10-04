@@ -7,7 +7,7 @@ RUN apt-get update && \
     git clone https://github.com/drawpile/Drawpile.git && \
     mkdir -p /tmp/Drawpile/build && \
     cd /tmp/Drawpile/build && \
-    cmake /tmp/Drawpile -DCMAKE_INSTALL_PREFIX=/usr -DCLIENT=off && \
+    cmake /tmp/Drawpile -DCMAKE_INSTALL_PREFIX=/usr -DCLIENT=off -DSERVERGUI=off && \
     make install && \
     useradd --system drawpile && \
     cd / && rm -rf /tmp/Drawpile
