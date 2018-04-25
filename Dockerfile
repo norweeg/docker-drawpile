@@ -2,7 +2,7 @@ FROM ubuntu:latest
 SHELL ["/bin/bash","-c"]
 ARG serverVersion=latest
 RUN apt-get update && \
-    apt-get install -y git cmake extra-cmake-modules g++ libkf5archive-dev pkg-config libkf5dnssd-dev libmicrohttpd-dev libminiupnpc-dev libgif-dev && \
+    apt-get install -y git cmake extra-cmake-modules g++ libkf5archive-dev pkg-config libkf5dnssd-dev libmicrohttpd-dev libsodium-dev libminiupnpc-dev libgif-dev && \
     rm -rf /var/lib/apt/lists/*; \
     cd /tmp && \
     git clone https://github.com/drawpile/Drawpile.git && \
