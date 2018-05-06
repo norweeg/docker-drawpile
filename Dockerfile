@@ -15,6 +15,7 @@ RUN apt-get update && \
     cmake /tmp/Drawpile -DCMAKE_INSTALL_PREFIX=/usr -DCLIENT=off -DSERVERGUI=off && \
     make install && \
     useradd --system drawpile && \
+    rm -rf /var/lib/apt/lists/* && \
     cd / && rm -rf /tmp/Drawpile
 
 
